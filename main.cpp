@@ -1,159 +1,172 @@
 #include <iostream>
 
 // Forward declarations
-void new_circuit_menu();
-void filter_circuit_menu();
-void amplifier_circuit_menu();
-void load_circuit_menu();
-int main_menu();
+void newCircuitMenu();
+void filterCircuitMenu();
+void amplifierCircuitMenu();
+void powerConverterCircuitMenu();
+void loadCircuitMenu();
+int mainMenu();
 
-void new_circuit_menu() {
+// Displays the menu for creating a new circuit.
+void newCircuitMenu() {
     int choice;
     do {
         std::cout << "\n----------- New Circuit Menu ------------\n";
-        std::cout << "1. Filters" << std::endl;
-        std::cout << "2. Amplifiers" << std::endl;
-        std::cout << "3. Power Converters" << std::endl;
-        std::cout << "4. Go back to Main Menu" << std::endl;
-        std::cout << "----------------------------------------\n" << std::endl;
-        std::cout << "Enter your choice: \n";
+        std::cout << "1. Filters\n2. Amplifiers\n3. Power Converters\n4. Go back to Main Menu\n";
+        std::cout << "----------------------------------------\n";
+        std::cout << "Enter your choice: ";
         std::cin >> choice;
-        switch (choice) {
+
+       switch (choice) {
             case 1:
-                std::cout << "Filters" << std::endl;
-                filter_circuit_menu();
+                filterCircuitMenu();
                 break;
             case 2:
-                std::cout << "Amplifiers" << std::endl;
-                amplifier_circuit_menu();
+                amplifierCircuitMenu();
                 break;
             case 3:
-                std::cout << "Power Converters" << std::endl;
-                // Add code for Option 3 here
+                powerConverterCircuitMenu();
                 break;
             case 4:
-                std::cout << "Go Back" << std::endl;
-                return; // Return to the previous menu (main menu)
+                return; // Exit the menu
             default:
-                std::cout << "Invalid choice. Please try again." << std::endl;
+                std::cout << "Invalid choice. Please try again.\n";
                 break;
         }
     } while (choice != 4);
 }
 
-void filter_circuit_menu() {
+void filterCircuitMenu() {
     int choice;
     do {
-        std::cout << "\n----------- New Filter Circuit ------------" << std::endl;
-        std::cout << "\nPlease select a desired filter for calculation below\n" << std::endl;
-        std::cout << "1. RC Filter" << std::endl;
-        std::cout << "2. RLC Filter" << std::endl;
-        std::cout << "3. Band Pass Filters" << std::endl;
-        std::cout << "4. Return to Main Menu" << std::endl;
-        std::cout << "----------------------------------------\n" << std::endl;
-        std::cout << "Enter your choice: \n";
+        std::cout << "\n----------- New Filter Circuit ------------\n";
+        std::cout << "1. RC Filter\n2. RLC Filter\n3. Band Pass Filters\n4. Return to Main Menu\n";
+        std::cout << "----------------------------------------\n";
+        std::cout << "Enter your choice: ";
         std::cin >> choice;
 
+        // Selection of filters
         switch (choice) {
             case 1:
-                std::cout << "RC Filters" << std::endl;
-                // Add code for RC Filters here
+                // Code for RC Filters
                 break;
             case 2:
-                std::cout << "RLC Filters" << std::endl;
-                // Add code for RLC Filters here
+                // Code for RLC Filters
                 break;
             case 3:
-                std::cout << "Band Pass Filters" << std::endl;
-                // Add code for Band Pass Filters here
+                // Code for Band Pass Filters
                 break;
             case 4:
-                std::cout << "Returning to previous menu...." << std::endl;
-                return; // Return to the previous menu (new_circuit_menu)
+                std::cout << "Returning to previous menu....\n";
+                return; // Return to the previous menu
             default:
-                std::cout << "Invalid choice. Please try again." << std::endl;
+                std::cout << "Invalid choice. Please try again.\n";
                 break;
         }
     } while (choice != 4);
 }
 
-void amplifier_circuit_menu() {
+
+void amplifierCircuitMenu() {
     int choice;
     do {
-        std::cout << "\n----------- New Amplififer Circuit Menu ------------" << std::endl;
-        std::cout << "Please select a desired amplifier for calculation below \n";
-        std::cout << "1. Non-Inverting Amplifier" << std::endl;
-        std::cout << "2. Inverting Amplifier" << std::endl;
-        std::cout << "3. Differential Amplifier" << std::endl;
-        std::cout << "4. Summing Amplifier" << std::endl;
-        std::cout << "5. Go Back" << std::endl;
-        std::cout << "----------------------------------------" << std::endl;
-        std::cout << "Enter your choice: \n";
+        std::cout << "\n----------- New Amplifier Circuit Menu ------------\n";
+        std::cout << "1. Non-Inverting Amplifier\n2. Inverting Amplifier\n3. Differential Amplifier\n4. Summing Amplifier\n5. Go Back\n";
+        std::cout << "----------------------------------------\n";
+        std::cout << "Enter your choice: ";
         std::cin >> choice;
 
+        // Implement specific actions based on the amplifier chosen
         switch (choice) {
             case 1:
-                std::cout << "Non-Inverting Amplifier" << std::endl;
-                // Add code for RC Filters here
+                // Code for Non-Inverting Amplifier
                 break;
             case 2:
-                std::cout << "Inverting Amplifier" << std::endl;
-                // Add code for RLC Filters here
+                // Code for Inverting Amplifier
                 break;
             case 3:
-                std::cout << "Differential Amplifier" << std::endl;
-                // Add code for Band Pass Filters here
+                // Code for Differential Amplifier
                 break;
             case 4:
-                std::cout << "Summing Amplifier" << std::endl;
-                break; // Return to the previous menu (new_circuit_menu)
-            case 5: 
-                std::cout << "Returning to previous menu...." << std::endl;
-                return;
+                // Code for Summing Amplifier
+                break;
+            case 5:
+                std::cout << "Returning to previous menu....\n";
+                return; // Exit the menu
             default:
-                std::cout << "Invalid choice. Please try again." << std::endl;
+                std::cout << "Invalid choice. Please try again.\n";
                 break;
         }
     } while (choice != 5);
 }
 
-void load_circuit_menu() {
-    std::cout << "\n----------- Load Circuit Menu ------------" << std::endl;
-    std::cout << "FILES WILL APPEAR HERE EVENTUALLY " << std::endl;
-    std::cout << "----------------------------------------\n" << std::endl;
-}
-
-int main_menu() {
+void powerConverterCircuitMenu() {
     int choice;
     do {
-        std::cout << "\n----------- Main Menu ------------\n";
-        std::cout << "1. New Circuit" << std::endl;
-        std::cout << "2. Load Circuit" << std::endl;
-        std::cout << "3. Exit" << std::endl;
-        std::cout << "----------------------------------\n" << std::endl;
-        std::cout << "Enter your choice: \n";
+        std::cout << "\n----------- New Power Converter Circuit ------------\n";
+        std::cout << "1. Buck Converter\n2. Boost Converter\n3. Rectifier\n4. Go Back\n";
+        std::cout << "----------------------------------------\n";
+        std::cout << "Enter your choice: ";
         std::cin >> choice;
+
+        // Implement specific actions based on the power converter chosen
         switch (choice) {
             case 1:
-                std::cout << "You selected New Circuit" << std::endl;
-                new_circuit_menu();
+                // Code for Buck Converter
                 break;
             case 2:
-                std::cout << "You selected Load Circuit" << std::endl;
-                load_circuit_menu();
+                // Code for Boost Converter
                 break;
             case 3:
-                std::cout << "Exiting the program." << std::endl;
+                // Code for Rectifier
                 break;
+            case 4:
+                std::cout << "Returning to previous menu....\n";
+                return; // Exit the menu
             default:
-                std::cout << "Invalid choice. Please try again." << std::endl;
+                std::cout << "Invalid choice. Please try again.\n";
+                break;
+        }
+    } while (choice != 4);
+}
+
+void loadCircuitMenu() {
+    std::cout << "\n----------- Load Circuit Menu ------------\n";
+    std::cout << "FILES WILL APPEAR HERE EVENTUALLY\n";
+    std::cout << "----------------------------------------\n";
+    // Load circuit functionality to be implemented
+}
+
+// Main menu function to navigate through the program.
+int mainMenu() {
+    int choice;
+    do {
+        std::cout << "\n----------- NEW Main Menu ------------\n";
+        std::cout << "1. New Circuit\n2. Load Circuit\n3. Exit\n";
+        std::cout << "----------------------------------\n";
+        std::cout << "Enter your choice: ";
+        std::cin >> choice;
+
+        switch (choice) {
+            case 1:
+                newCircuitMenu();
+                break;
+            case 2:
+                loadCircuitMenu();
+                break;
+            case 3:
+                std::cout << "Exiting the program.\n";
+                return 0; // Exit the program
+            default:
+                std::cout << "Invalid choice. Please try again.\n";
                 break;
         }
     } while (choice != 3);
     return 0;
 }
 
+// Main function to start the application.
 int main() {
-    main_menu();
-    return 0;
+    return mainMenu(); // Start the application
 }
