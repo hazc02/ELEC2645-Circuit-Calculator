@@ -12,7 +12,7 @@ int mainMenu();
 void newCircuitMenu() {
     int choice;
     do {
-        std::cout << "\n----------- New Circuit Menu ------------\n";
+        std::cout << "\n----------- New Circuit ------------\n";
         std::cout << "1. Filters\n2. Amplifiers\n3. Power Converters\n4. Go back to Main Menu\n";
         std::cout << "----------------------------------------\n";
         std::cout << "Enter your choice: ";
@@ -71,7 +71,7 @@ void filterCircuitMenu() {
 void amplifierCircuitMenu() {
     int choice;
     do {
-        std::cout << "\n----------- New Amplifier Circuit Menu ------------\n";
+        std::cout << "\n----------- New Amplifier Circuit ------------\n";
         std::cout << "1. Non-Inverting Amplifier\n2. Inverting Amplifier\n3. Differential Amplifier\n4. Summing Amplifier\n5. Go Back\n";
         std::cout << "----------------------------------------\n";
         std::cout << "Enter your choice: ";
@@ -132,7 +132,7 @@ void powerConverterCircuitMenu() {
 }
 
 void loadCircuitMenu() {
-    std::cout << "\n----------- Load Circuit Menu ------------\n";
+    std::cout << "\n----------- Load Circuit ------------\n";
     std::cout << "FILES WILL APPEAR HERE EVENTUALLY\n";
     std::cout << "----------------------------------------\n";
     // Load circuit functionality to be implemented
@@ -142,7 +142,7 @@ void loadCircuitMenu() {
 int mainMenu() {
     int choice;
     do {
-        std::cout << "\n----------- NEW Main Menu ------------\n";
+        std::cout << "\n-----------Main Menu ------------\n";
         std::cout << "1. New Circuit\n2. Load Circuit\n3. Exit\n";
         std::cout << "----------------------------------\n";
         std::cout << "Enter your choice: ";
